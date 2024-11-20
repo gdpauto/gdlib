@@ -18,5 +18,9 @@ type VerifyLicenceRequest struct {
 }
 
 type VerifyLicenceResponse struct {
-	Data []byte `form:"data"`
+	Key        string    `json:"key"`
+	IsValid    bool      `json:"is_valid"`
+	ComputerID string	 `json:"computer_id"`
+	StartDate  time.Time `json:"start_date"`
+	ExpiresAt  time.Time `json:"expires_at"`
 }
